@@ -1,8 +1,6 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "labels": [
-        "dependencies"
-    ],
+    "labels": ["dependencies"],
     "dependencyDashboard": true,
     "dependencyDashboardAutoclose": true,
     "lockFileMaintenance": {
@@ -11,55 +9,50 @@
         "rebaseStalePrs": true,
         "branchTopic": "lock-file-maintenance",
         "commitMessageAction": "Lock file maintenance",
-        "schedule": [
-            "before 5am on monday"
-        ],
+        "schedule": ["before 5am on monday"],
         "prBodyDefinitions": {
             "Change": "All locks refreshed"
         }
     },
-    "postUpdateOptions": [
-        "npmDedupe"
-    ],
+    "postUpdateOptions": ["npmDedupe"],
     "rangeStrategy": "update-lockfile",
     "rollbackPrs": true,
     "semanticCommits": "enabled",
     "packageRules": [
         {
-            "matchDepTypes": [
-                "devDependencies"
-            ],
-            "addLabels": [
-                "dev-dependencies"
-            ],
+            "matchDepTypes": ["devDependencies"],
+            "addLabels": ["dev-dependencies"],
             "automerge": true
         },
         {
-            "matchDepTypes": [
-                "dependencies"
-            ],
-            "addLabels": [
-                "prod-dependencies"
-            ]
+            "matchDepTypes": ["dependencies"],
+            "addLabels": ["prod-dependencies"]
         },
         {
-            "matchUpdateTypes": [
-                "patch",
-                "minor",
-                "lockFileMaintenance"
-            ],
-            "automerge": true
-        },
-        {
-            "matchDepTypes": [
-                "devDependencies"
-            ],
-            "matchUpdateTypes": [
-                "patch",
-                "minor"
-            ],
+            "matchDepTypes": ["devDependencies"],
+            "matchUpdateTypes": ["patch", "minor"],
             "groupName": "devDependencies (non-major)",
             "groupSlug": "dev-deps"
+        },
+        {
+            "matchUpdateTypes": ["lockFileMaintenance"],
+            "automerge": true
+        },
+        {
+            "matchManagers": ["node"],
+            "addLabels": ["javascript"]
+        },
+        {
+            "matchManagers": ["composer"],
+            "addLabels": ["php"]
+        },
+        {
+            "matchManagers": ["docker"],
+            "addLabels": ["docker"]
+        },
+        {
+            "matchManagers": ["github-actions"],
+            "addLabels": ["github-actions"]
         }
     ]
 }
