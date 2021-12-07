@@ -18,6 +18,7 @@
     "rangeStrategy": "update-lockfile",
     "rollbackPrs": true,
     "semanticCommits": "enabled",
+    "gitAuthor": "Volodymyr Kolesnykov <volodymyr+renovate@wildwolf.name>",
     "packageRules": [
         {
             "matchDepTypes": ["devDependencies"],
