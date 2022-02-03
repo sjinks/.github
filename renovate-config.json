@@ -21,16 +21,16 @@
     "gitAuthor": "Volodymyr Kolesnykov <volodymyr+renovate@wildwolf.name>",
     "packageRules": [
         {
-            "matchDepTypes": ["devDependencies"],
+            "matchDepTypes": ["devDependencies", "require-dev"],
             "addLabels": ["dev-dependencies"],
             "automerge": true
         },
         {
-            "matchDepTypes": ["dependencies"],
+            "matchDepTypes": ["dependencies", "require"],
             "addLabels": ["prod-dependencies"]
         },
         {
-            "matchDepTypes": ["devDependencies"],
+            "matchDepTypes": ["devDependencies", "require-dev"],
             "matchUpdateTypes": ["patch", "minor"],
             "groupName": "devDependencies (non-major)",
             "groupSlug": "dev-deps"
@@ -54,6 +54,10 @@
         {
             "matchManagers": ["github-actions"],
             "addLabels": ["github-actions"]
+        },
+        {
+            "matchDepTypes": ["action"],
+            "pinDigests": true
         }
     ]
 }
