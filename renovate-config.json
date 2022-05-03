@@ -40,6 +40,14 @@
             "automerge": true
         },
         {
+            "matchDepTypes": ["devDependencies"],
+            "matchPackagePatterns": ["jest", "mocha", "sinon", "chai"],
+            "addLabels": ["testing"],
+            "groupName": "Testing Tools",
+            "groupSlug": "testing",
+            "automerge": true
+        },
+        {
             "matchManagers": ["node"],
             "addLabels": ["javascript"]
         },
