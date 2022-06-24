@@ -59,5 +59,11 @@
             "matchDepTypes": ["action"],
             "pinDigests": true
         }
-    ]
+    ],
+    "docker": {
+        "pinDigests": true
+    },
+    "pin": {
+        "automerge": true
+    }
 }
