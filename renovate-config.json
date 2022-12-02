@@ -67,6 +67,16 @@
         {
             "matchDepTypes": ["action"],
             "pinDigests": true
+        },
+        {
+            "matchManagers": ["github-actions"],
+            "matchPackagePatterns": ["^github/", "^actions/"],
+            "automerge": true
+        },
+        {
+            "matchManagers": ["dockerfile", "docker-compose"],
+            "matchPackageNames": ["mariadb", "wordpress"],
+            "automerge": true
         }
     ],
     "docker": {
