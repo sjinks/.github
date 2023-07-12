@@ -49,6 +49,20 @@
             "automerge": true
         },
         {
+            "matchDepTypes": ["devDependencies"],
+            "matchPackageNames": ["eslint-plugin-prettier", "prettier"],
+            "groupName": "prettier-related packages",
+            "groupSlug": "prettier",
+            "automerge": true
+        },
+        {
+            "matchDepTypes": ["devDependencies"],
+            "matchPackagePrefixes": ["@typescript-eslint/"],
+            "groupName": "ESLint Typescript Packages",
+            "groupSlug": "ts-eslint",
+            "automerge": true
+        },
+        {
             "matchManagers": ["node"],
             "addLabels": ["javascript"]
         },
