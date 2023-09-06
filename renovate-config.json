@@ -63,7 +63,7 @@
             "automerge": true
         },
         {
-            "matchDepTypes": ["devDependencies"],
+            "matchDepTypes": ["require-dev"],
             "matchPackageNames": ["wp-coding-standards/wpcs", "automattic/vipwpcs"],
             "groupName": "WP/VIP Coding Standards",
             "groupSlug": "wpcs",
