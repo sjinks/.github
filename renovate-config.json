@@ -63,6 +63,13 @@
             "automerge": true
         },
         {
+            "matchDepTypes": ["devDependencies"],
+            "matchPackageNames": ["wp-coding-standards/wpcs", "automattic/vipwpcs"],
+            "groupName": "WP/VIP Coding Standards",
+            "groupSlug": "wpcs",
+            "automerge": true
+        },
+        {
             "matchManagers": ["node"],
             "addLabels": ["javascript"]
         },
@@ -84,7 +91,7 @@
         },
         {
             "matchManagers": ["github-actions"],
-            "matchPackagePatterns": ["^github/", "^actions/"],
+            "matchPackagePatterns": ["^github/", "^actions/", "^docker/"],
             "automerge": true
         },
         {
