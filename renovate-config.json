@@ -91,7 +91,7 @@
         },
         {
             "matchManagers": ["github-actions"],
-            "matchPackagePatterns": ["^github/", "^actions/", "^docker/"],
+            "matchPackagePatterns": ["^github/", "^actions/", "^docker/", "^step-security/harden-runner$"],
             "automerge": true
         },
         {
